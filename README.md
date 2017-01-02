@@ -25,7 +25,7 @@ Benjamin Franklin has many wise sayings that have inspired this project:
 1. For highest-priority tasks on Trello and/or those with due dates assigned to them, allow the user to assign them to a timeslot before or after an event (or between events) on the calendar.
 2. Allow the user to specify dependencies between tasks and events, such as packing that needs to be done before a flight, or follow-up emails following a meeting.
 3. Allow the user to make tasks recurring.
-4. Allow the user to create new tasks.
+4. Allow the user to create/update tasks with approximate time to finish the task.
 5. Allow the user to create events and tasks associated with them at the same time.
 
 ## Technologies
