@@ -18,7 +18,7 @@ Benjamin Franklin has many wise sayings that have inspired this project:
 3. If there are multiple items on my calendar, determine how long it would take to get from one event to another (by all means), or to get from the 1st event home and from home to the 2nd event.
 4. The day of an event, ping the user about when to leave, and if there are weather conditions that might affect the commute.
 
-![Calendar mockup](image.jpg?raw=true "Calendar mockup")
+![Calendar mockup](static/image.jpg?raw=true "Calendar mockup")
 
 ### Tasks
 
