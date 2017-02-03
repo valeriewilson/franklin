@@ -4,7 +4,7 @@
 
 Most of the things I take care of everyday are split between calendars and task lists.  Every week, I plan out the coming week, figuring out how to get from point A to B based on my schedule and when I can tackle the items on my to-do list given my plans.  In 2017, I resolve to spend less of my time planning and more time doing what I enjoy and/or need to get done.
 
-Benjamin Franklin has many wise sayings that have inspired this project:
+Benjamin Franklin has said:
 * By failing to prepare, you are preparing to fail. 
 * Lost time is never found again. 
 * How few there are who have courage enough to own their faults, or resolution enough to mend them.
