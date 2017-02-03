@@ -11,6 +11,20 @@ Benjamin Franklin has many wise sayings that have inspired this project:
 
 ## Concept
 
+The user should be able to:
+* Work with tasks and events in one place
+* Correlate events with tasks, places, and people
+* Determine if they can add the event to a calendar based on how much work is already scheduled and transportation time
+* Determine the best way to get from one event to another based on start & end locations, weather, any transit-friendly tasks, etc.
+* Cluster tasks by parent task
+* Generate alerts: when to leave based on real-time information, which bus to take, if weather will impact transportation
+* Have a daily check-in: how the user would prefer to travel based on the available options, what to bring, what to attend (for optional events)
+* Set repeatable tasks and events that can be modified en masse or individually
+* Move tasks around the calendar
+* Assign expected completion time, due dates, ability to complete on public transit, and alerts to tasks
+
+## Possible Implementations
+
 ### Commuting
 
 1. Create a calendar that displays all events in all my calendars.
