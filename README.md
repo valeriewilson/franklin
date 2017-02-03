@@ -44,6 +44,10 @@ The user should be able to:
 
 ## Technologies
 
+Among the considerations here:
+* Whether this would be an all-in-one app, an app that integrates with Google calendar & Trello, or would work within the constraints of Google Maps
+* Web vs. mobile app
+
 Possible integrations:
 * Trello API
 * Google Calendar API
