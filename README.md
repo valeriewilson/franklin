@@ -34,7 +34,7 @@ The user should be able to:
 * Weather Underground API
 
 ### Data Model
-User:
+#### User
 * user_id (integer, required, primary key)
 * username (string, required)
 * password (string, required, salted & hashed)
@@ -48,7 +48,7 @@ User:
 * preferred_type (string, one of above transportation options
 * (Trello account access info, TBD)
 
-Task:
+#### Task
 * trello_id (integer, required, primary key)
 * parent_id (integer, not required)
 * duration (float, default 1.0 -- i.e. 1 hour)
@@ -59,12 +59,12 @@ Task:
 * repeat_until (datetime, not required)
 * repeat_frequency (integer for day of week, not required)
 
-Event:
+#### Event
 * arrive_before (integer, default 10 -- i.e. arrive 10 minutes early)
 * optional (boolean, default False)
 * complete (boolean, default False)
 
-Transportation
+#### Transportation
 * event_id_from (integer, not required, unless event_id_to is Null)
 * event_id_to (integer, not required, unless event_id_from is Null)
 * type (string, default user.preferred_type)
@@ -73,6 +73,6 @@ Transportation
 * active (boolean, default True)
 * complete (boolean, default False)
 
-Event-Tasks
+#### Event-Tasks
 * event_id
 * task_id
