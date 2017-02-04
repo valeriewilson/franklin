@@ -74,5 +74,6 @@ The user should be able to:
 * complete (boolean, default False)
 
 #### Event-Tasks
-* event_id
-* task_id
+* id (integer, required, primary key)
+* event_id (integer, required)
+* task_id (integer, required)
