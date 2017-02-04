@@ -27,7 +27,53 @@ The user should be able to:
 
 ## Data
 
-Integrations:
+### Integrations
 * Trello API
 * Google Calendar API
 * Google Maps Directions API
+* Weather Underground API
+
+### Data Model
+
+User:
+* user_id (integer, required, primary key)
+* username (string, required)
+* password (string, required, salted & hashed)
+* bicycle (boolean, default True)
+* public_transit (boolean, default True)
+* drive (boolean, default True)
+* rideshare_carpool (boolean, default True)
+* rideshare_single (boolean, default True)
+* walk (boolean, default True)
+* ferry (boolean, default True)
+* preferred_type (string, one of above transportation options
+* (Trello account access info, TBD)
+
+Task:
+* trello_id (integer, required, primary key)
+* parent_id (integer, not required)
+* duration (float, default 1.0 -- i.e. 1 hour)
+* priority (integer, not required)
+* complete (boolean, default False)
+* repeat (boolean, default False)
+* repeat_num (integer, not required)
+* repeat_until (datetime, not required)
+* repeat_frequency (integer for day of week, not required)
+
+Event:
+* arrive_before (integer, default 10 -- i.e. arrive 10 minutes early)
+* optional (boolean, default False)
+* complete (boolean, default False)
+
+Transportation
+* event_id_from (integer, not required, unless event_id_to is Null)
+* event_id_to (integer, not required, unless event_id_from is Null)
+* type (string, default user.preferred_type)
+* datetime_start (datetime, not required -- calculated)
+* datetime_end (datetime, not required -- calculated)
+* active (boolean, default True)
+* complete (boolean, default False)
+
+Event-Tasks
+* event_id
+* task_id
