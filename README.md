@@ -34,6 +34,9 @@ The user should be able to:
 * Weather Underground API
 
 ### Data Model
+
+Consideration for DB: MySQL
+
 #### User
 * user_id (integer, required, primary key)
 * username (string, required)
