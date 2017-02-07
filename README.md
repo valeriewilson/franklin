@@ -35,8 +35,6 @@ The user should be able to:
 
 ### Data Model
 
-Consideration for DB: MySQL
-
 #### User
 * user_id (integer, required, primary key)
 * username (string, required)
@@ -80,3 +78,8 @@ Consideration for DB: MySQL
 * id (integer, required, primary key)
 * event_id (integer, required)
 * task_id (integer, required)
+
+## Interesting Technology
+* DB: MySQL
+* FullCalendar (open source JS calendar)
+
