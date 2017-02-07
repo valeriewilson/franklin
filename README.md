@@ -49,37 +49,49 @@ The user should be able to:
 * preferred_type (string, one of above transportation options
 * (Trello account access info, TBD)
 
+### Calendars
+* id (integer, required, primary key)
+* user_id (integer, required, foreign key to users.user_id)
+* calendar_id (integer, required)
+
 #### Task
 * trello_id (integer, required, primary key)
+* user_id (integer, required, foreign key to users.user_id)
 * parent_id (integer, not required)
 * duration (float, default 1.0 -- i.e. 1 hour)
 * priority (integer, not required)
-* complete (boolean, default False)
+* all_info (boolean, default False)
 * repeat (boolean, default False)
 * repeat_num (integer, not required)
 * repeat_until (datetime, not required)
 * repeat_frequency (integer for day of week, not required)
+* completed (boolean, default False)
 
 #### Event
+* id (integer, required, primary key)
+* event_id (integer, required)
+* user_id (integer, required, foreign key to users.user_id)
 * arrive_before (integer, default 10 -- i.e. arrive 10 minutes early)
 * optional (boolean, default False)
-* complete (boolean, default False)
+* all_info (boolean, default False)
 
 #### Transportation
 * event_id_from (integer, not required, unless event_id_to is Null)
 * event_id_to (integer, not required, unless event_id_from is Null)
+* user_id (integer, required, foreign key to users.user_id)
 * type (string, default user.preferred_type)
 * datetime_start (datetime, not required -- calculated)
 * datetime_end (datetime, not required -- calculated)
 * active (boolean, default True)
-* complete (boolean, default False)
+* all_info (boolean, default False)
 
 #### Event-Tasks
 * id (integer, required, primary key)
+* user_id (integer, required, foreign key to users.user_id)
 * event_id (integer, required)
 * task_id (integer, required)
 
-## Interesting Technology
+## Technology
+* Google Sign-In to gain access to calendars (https://developers.google.com/identity/sign-in/web/sign-in)
 * DB: MySQL
 * FullCalendar (open source JS calendar)
-
