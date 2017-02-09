@@ -93,6 +93,6 @@ The user should be able to:
 
 ## Technology
 * Google Sign-In to gain access to calendars (https://developers.google.com/identity/sign-in/web/sign-in)
-* DB: MySQL
+* DB: MySQL or PostgreSQL
 * FullCalendar (open source JS calendar)
 * Front-end framework, like Angular or React?
