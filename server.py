@@ -1,11 +1,13 @@
 from flask import Flask, redirect, render_template
 from flask_debugtoolbar import DebugToolbarExtension
+from flask_mysqldb import MySQL
 from calculation import *
 from markov import *
 import os
 
 
 app = Flask(__name__)
+mysql = MySQL(app)
 
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "FLASK_KEY")
 
