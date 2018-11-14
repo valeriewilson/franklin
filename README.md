@@ -14,3 +14,6 @@ A web application that tracks events, tasks, and transportation to / between eve
 * JS/React
 * Ruby/Rails
 * PostgreSQL
+
+## Recent Updates
+* Built initial JS/React + Ruby/Rails project files
