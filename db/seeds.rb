@@ -2,6 +2,7 @@ Task.create(
   title: 'Build initial UI', 
   description: 'Build out calendar view + task pane for desktop with static calendar displaying today and the next 6 days', 
   priority: 1, 
+  start_time: '2018-12-18 09:00:00',
   duration: 300
 )
 

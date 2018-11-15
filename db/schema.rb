@@ -25,25 +25,12 @@ ActiveRecord::Schema.define(version: 20181115224326) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "items", force: :cascade do |t|
-    t.boolean "is_event", null: false
-    t.string "title", null: false
-    t.string "description"
-    t.string "location"
-    t.datetime "due_date"
-    t.integer "priority"
-    t.integer "category"
-    t.datetime "start_date"
-    t.integer "duration_minutes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "tasks", force: :cascade do |t|
     t.string "title", null: false
     t.string "description"
     t.datetime "due_date"
     t.integer "priority"
+    t.datetime "start_time"
     t.integer "duration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
