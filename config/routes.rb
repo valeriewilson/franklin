@@ -1,7 +1,8 @@
 Rails.application.routes.draw do 
   namespace :api do 
     namespace :v1 do 
-     resources :items, only: [:index, :create, :destroy, :update]
+     resources :events, only: [:index, :create, :destroy, :update]
+     resources :tasks, only: [:index, :create, :destroy, :update]
     end 
   end 
 

@@ -2,22 +2,30 @@ class AllItems extends React.Component {
 
   constructor(props) {
     super(props);
+
     this.state = {
-      items: []
+      events: [],
+      tasks: []
     };
   }
 
   componentDidMount() {
-    fetch('/api/v1/items.json')
+    fetch('/api/v1/events.json')
       .then((response) => { return response.json(); })
-      .then((data) => { this.setState({ items: data }); });
+      .then((data) => { this.setState({ events: data }); });
+
+    fetch('/api/v1/tasks.json')
+      .then((response) => { return response.json(); })
+      .then((data) => { this.setState({ tasks: data }); });
   }
 
   formatDuration(duration) {
     if (!duration) {
       return null;
-    } else if (duration > 60) {
-      const hours = (duration / 60).toFixed(0),
+    } 
+
+    if (duration > 60) {
+      const hours   = (duration / 60).toFixed(0),
             minutes = duration % 60;
 
       if (minutes > 0) {
@@ -25,27 +33,26 @@ class AllItems extends React.Component {
       }
 
       return `${ hours } hours`;
-    } else if (duration == 60) {
-      return '1 hour';
-    } else {
-      return `${ duration } minutes`;
     }
+      
+    if (duration == 60) {
+      return '1 hour';
+    } 
+
+    return `${ duration } minutes`;
   }
 
   render() {
-    const items = this.state.items.map((item) => {
-      const duration = this.formatDuration(item.duration_minutes);
+    const tasks = this.state.tasks.map((task) => {
+      const duration = this.formatDuration(task.duration);
 
       return (
-        <div key={ item.id }>
-          <h3>{ item.title }</h3>
-          { item.description ? <p>Description: { item.description }</p> : null }
-          { item.location ? <p>Location: { item.location }</p> : null }
-          { item.due_date ? <p>Due: { item.due_date }</p> : null }
-          { item.priority ? <p>Priority: { item.priority }</p> : null }
-          { item.category ? <p>Category: { item.category }</p> : null }
-          { item.start_date ? <p>Start time: { item.start_date }</p> : null }
-          { item.duration ? <p>Duration: { item.duration }</p> : null }
+        <div key={ task.id }>
+          <h3>{ task.title }</h3>
+          { task.description ? <p>Description: { task.description }</p> : null }
+          { task.due_date ? <p>Due: { task.due_date }</p> : null }
+          { task.priority ? <p>Priority: { task.priority }</p> : null }
+          { task.duration ? <p>Duration: { task.duration }</p> : null }
         </div>
       )
     })
@@ -53,7 +60,7 @@ class AllItems extends React.Component {
     return(
       <div>
         <h1>All Tasks & Events</h1>
-        { items }
+        { tasks }
       </div>
     )
   }
