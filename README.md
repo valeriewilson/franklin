@@ -19,3 +19,4 @@ A web application that tracks events, tasks, and transportation to / between eve
 * Built initial JS/React + Ruby/Rails project files
 * Deployed the project to Heroku
 * Split tasks & events
+* Build out React components
