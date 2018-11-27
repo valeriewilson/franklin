@@ -1,10 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-
 class ScheduledEventOrTask extends React.Component {
   render() {
-    const eventOrTask = this.props;
+    const eventOrTask = this.props.eventOrTask;
 
     return (
       <div>
@@ -13,7 +9,7 @@ class ScheduledEventOrTask extends React.Component {
           { eventOrTask.description ? <p>Description: { eventOrTask.description }</p> : null }
           { eventOrTask.due_date ? <p>Due: { eventOrTask.due_date }</p> : null }
           { eventOrTask.priority ? <p>Priority: { eventOrTask.priority }</p> : null }
-          <FormatDuration duration={ eventOrTask.duration }/>
+          <FormattedTimeframe duration={ eventOrTask.duration } />
         </div>
       </div>
     );

@@ -1,6 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
 class Calendar extends React.Component {
 
   constructor(props) {
@@ -25,12 +22,12 @@ class Calendar extends React.Component {
   render() {
     const events = this.state.events.map((event) => {
             return (
-              <ScheduledEventOrTask eventOrTask={ event }/>
+              <ScheduledEventOrTask eventOrTask={ event } />
             )
           }),
           tasks = this.state.tasks.map((task) => {
             return (
-              <ScheduledEventOrTask eventOrTask={ task }/>
+              <ScheduledEventOrTask eventOrTask={ task } />
             )
           });
 
