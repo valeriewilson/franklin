@@ -1,6 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
 class TaskList extends React.Component {
 
   constructor(props) {
@@ -19,9 +16,7 @@ class TaskList extends React.Component {
 
   render() {
     const tasks = this.state.tasks.map((task) => {
-      return (
-        <UnscheduledTask task={ task }/>
-      );
+      return <UnscheduledTask task={ task } />;
     });
 
     return (
