@@ -9,7 +9,7 @@ class UnscheduledTask extends React.Component {
         { task.description ? <p>Description: { task.description }</p> : null }
         { task.due_date ? <p>Due: { task.due_date }</p> : null }
         { task.priority ? <p>Priority: { task.priority }</p> : null }
-        { task.duration ? <p>Duration: { task.duration }</p> : null }
+        { task.duration ? <FormattedTimeframe duration={ task.duration }/> : null }
       </div>
     )
   }

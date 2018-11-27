@@ -1,13 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-
 class FormattedTimeframe extends React.Component {
   
   render() {
-    if (!duration) {
-      return null;
-    } 
+    const duration = this.props.duration;
 
     if (duration > 60) {
       const hours   = (duration / 60).toFixed(0),
